@@ -1,17 +1,19 @@
+import { Avatar } from '../Avatar'
 import style from './index.module.css'
+import { Comment } from '../Comment'
 
 export function Post(){
     return(
         <article className={style.post}>
             <header>
                 <div className={style.author}>
-                    <img className={style.avatar} src="https://avatars.githubusercontent.com/u/117478158?v=4" alt="avatar" />
+                   <Avatar foto='https://github.com/LucasFMarques2.png'/>
                     <div className={style.authorInfo}>
                         <strong>Lucas Freitas</strong>
                         <span>Web Develope</span>
                     </div>
                 </div>
-                <time title='11 de maio 08:13h' datetime="2022-05-11">Públicado há 1h</time>
+                <time title='11 de maio 08:13h' dateTime="2022-05-11">Públicado há 1h</time>
             </header>
             <div className={style.content}>
                 <p>Fala galeraa 👋</p>
@@ -27,6 +29,11 @@ export function Post(){
                     <button type='submit'>Publicar</button>
                 </footer>
             </form>
+            <div className={style.commentList}>
+                <Comment/>
+                <Comment/>
+                <Comment/>
+            </div>
         </article>
     )
 }
