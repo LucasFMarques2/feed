@@ -1,7 +1,10 @@
 import style from './index.module.css'
 
-export function Avatar({foto}){
+export function Avatar({foto, hasBorder=true}){
     return(
-        <img className={style.avatar} src={foto}/>
+        <img 
+           className={ hasBorder ? style.avatarWithBorder : style.avatar} 
+           src={foto}
+        />
     )
 }
